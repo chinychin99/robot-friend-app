@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/statusMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentTop="true"/>
+
+    <!-- UP -->
+    <ImageButton
+        android:id="@+id/btnUp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/up_arrow"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/statusMsg"
+        android:background="@null"
+        android:contentDescription="Up" />
+
+    <!-- LEFT -->
+    <ImageButton
+        android:id="@+id/btnLeft"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/left_arrow"
+        android:layout_below="@id/btnUp"
+        android:layout_toStartOf="@id/btnUp"
+        android:layout_marginEnd="32dp"
+        android:background="@null"
+        android:contentDescription="Left" />
+
+    <!-- RIGHT -->
+    <ImageButton
+        android:id="@+id/btnRight"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/right_arrow"
+        android:layout_below="@id/btnUp"
+        android:layout_toEndOf="@id/btnUp"
+        android:layout_marginStart="32dp"
+        android:background="@null"
+        android:contentDescription="Right" />
+
+    <!-- DOWN -->
+    <ImageButton
+        android:id="@+id/btnDown"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/down_arrow"
+        android:layout_below="@id/btnLeft"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:background="@null"
+        android:contentDescription="Down" />
+
+    <!-- Rise and Fall at Bottom Right -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="24dp">
+
+        <ImageButton
+            android:id="@+id/btnRise"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/rise_arrow"
+            android:background="@null"
+            android:contentDescription="Rise" />
+
+        <ImageButton
+            android:id="@+id/btnFall"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/fall_arrow"
+            android:background="@null"
+            android:contentDescription="Fall" />
+    </LinearLayout>
+
+</RelativeLayout>
